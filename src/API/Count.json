@@ -1,7 +1,6 @@
 {
   "result": {
     "summary": {
-
       "totalClients": {
         "title": "Total Clients",
         "count": 10,
@@ -28,8 +27,8 @@
 
       "ttaClients": {
         "title": "TTA Clients",
-        "count": 0,
-        "clients": [],
+        "count": 1,
+        "clients": ["Apita"],
         "description": "Clients implemented using TTA platform"
       },
 
@@ -77,11 +76,7 @@
         "disabled": {
           "title": "Citrix Disabled",
           "count": 3,
-          "clients": [
-            "David Lerner",
-            "Hilltop",
-            "Leede Jones Gable"
-          ],
+          "clients": ["David Lerner", "Hilltop", "Leede Jones Gable"],
           "description": "Clients running without Citrix dependency"
         }
       },
@@ -126,10 +121,7 @@
         "disabled": {
           "title": "Barcode Disabled",
           "count": 2,
-          "clients": [
-            "Hilltop",
-            "Leede Jones Gable"
-          ]
+          "clients": ["Hilltop", "Leede Jones Gable"]
         }
       },
 
@@ -163,7 +155,6 @@
           "count": 7
         }
       }
-
     }
   }
 }
