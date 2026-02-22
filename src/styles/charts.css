@@ -160,12 +160,6 @@
   transition: all var(--transition);
 }
 
-.date-btn:hover {
-  /* border-color: var(--accent-blue); */
-  /* background-color: rgba(0, 212, 255, 0.1); */
-  /* color: var(--accent-blue); */
-}
-
 .date-btn.active {
   /* background-color: var(--accent-blue); */
   color: white;

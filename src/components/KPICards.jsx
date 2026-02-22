@@ -5,7 +5,6 @@ import {
   Grid2x2,
   Activity,
   Building2,
-  ScanLine,
   Barcode,
   Eye,
   Search,

@@ -41,7 +41,7 @@ function Sidebar({ isOpen, onToggleSidebar, onNavigate }) {
           {menuItems.map(item => (
             <li key={item.id} className="menu-item">
               <a
-                href="#"
+                href={`/${item.id}`}
                 className={`menu-link ${activeItem === item.id ? 'active' : ''}`}
                 onClick={(e) => {
                   e.preventDefault();
