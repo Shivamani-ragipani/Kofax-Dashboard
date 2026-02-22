@@ -1,0 +1,169 @@
+{
+  "result": {
+    "summary": {
+
+      "totalClients": {
+        "title": "Total Clients",
+        "count": 10,
+        "description": "Total number of active client implementations"
+      },
+
+      "kofaxClients": {
+        "title": "Kofax Clients",
+        "count": 10,
+        "clients": [
+          "Alight",
+          "Apex (Penson)",
+          "David Lerner",
+          "Hilltop",
+          "JPMC",
+          "Leede Jones Gable",
+          "NBIN (Inform)",
+          "Oppenheimer",
+          "Raymond James (Inform)",
+          "WorldSource (Inform)"
+        ],
+        "description": "Clients implemented using Kofax platform"
+      },
+
+      "ttaClients": {
+        "title": "TTA Clients",
+        "count": 0,
+        "clients": [],
+        "description": "Clients implemented using TTA platform"
+      },
+
+      "clientTypeDistribution": {
+        "title": "Client Type Distribution",
+        "internal": {
+          "title": "Internal Clients",
+          "count": 2,
+          "clients": ["JPMC", "NBIN (Inform)"],
+          "description": "Clients managed within internal enterprise environment"
+        },
+        "external": {
+          "title": "External Clients",
+          "count": 8,
+          "clients": [
+            "Alight",
+            "Apex (Penson)",
+            "David Lerner",
+            "Hilltop",
+            "Leede Jones Gable",
+            "Oppenheimer",
+            "Raymond James (Inform)",
+            "WorldSource (Inform)"
+          ],
+          "description": "Clients hosted and supported as external implementations"
+        }
+      },
+
+      "citrixUsage": {
+        "title": "Citrix Usage",
+        "enabled": {
+          "title": "Citrix Enabled",
+          "count": 7,
+          "clients": [
+            "Alight",
+            "Apex (Penson)",
+            "JPMC",
+            "NBIN (Inform)",
+            "Oppenheimer",
+            "Raymond James (Inform)",
+            "WorldSource (Inform)"
+          ],
+          "description": "Clients operating in Citrix-based environment"
+        },
+        "disabled": {
+          "title": "Citrix Disabled",
+          "count": 3,
+          "clients": [
+            "David Lerner",
+            "Hilltop",
+            "Leede Jones Gable"
+          ],
+          "description": "Clients running without Citrix dependency"
+        }
+      },
+
+      "ingestionChannels": {
+        "title": "Ingestion Channels",
+        "scan": {
+          "title": "Scan Ingestion",
+          "count": 10,
+          "description": "Primary document ingestion through physical scanning"
+        },
+        "emailImport": {
+          "title": "Email Import",
+          "count": 1,
+          "clients": ["David Lerner"],
+          "description": "Email-based automated document intake"
+        },
+        "fax": {
+          "title": "Fax Ingestion",
+          "count": 1,
+          "clients": ["Raymond James (Inform)"],
+          "description": "Fax-based ingestion channel"
+        }
+      },
+
+      "barcodeUsage": {
+        "title": "Barcode Usage",
+        "enabled": {
+          "title": "Barcode Enabled",
+          "count": 8,
+          "clients": [
+            "Alight",
+            "Apex (Penson)",
+            "David Lerner",
+            "JPMC",
+            "NBIN (Inform)",
+            "Oppenheimer",
+            "Raymond James (Inform)",
+            "WorldSource (Inform)"
+          ]
+        },
+        "disabled": {
+          "title": "Barcode Disabled",
+          "count": 2,
+          "clients": [
+            "Hilltop",
+            "Leede Jones Gable"
+          ]
+        }
+      },
+
+      "ocrUsage": {
+        "title": "OCR Usage",
+        "enabledOrPartial": {
+          "title": "OCR Enabled (Full/Partial)",
+          "count": 1,
+          "clients": ["JPMC"]
+        },
+        "disabled": {
+          "title": "OCR Disabled",
+          "count": 9
+        }
+      },
+
+      "lookupUsage": {
+        "title": "Lookup Integration Usage",
+        "databaseLookup": {
+          "title": "Database Lookup",
+          "count": 2,
+          "clients": ["JPMC", "Oppenheimer"]
+        },
+        "webServiceLookup": {
+          "title": "Web Service Lookup",
+          "count": 1,
+          "clients": ["Alight"]
+        },
+        "noLookup": {
+          "title": "No Lookup Integration",
+          "count": 7
+        }
+      }
+
+    }
+  }
+}

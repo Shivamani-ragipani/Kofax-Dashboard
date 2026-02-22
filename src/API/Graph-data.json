@@ -1,0 +1,81 @@
+{
+  "status": "success",
+  "timestamp": "2026-02-22T10:45:00Z",
+  "message": "Client processing metrics fetched successfully",
+  "data": {
+    "summary": {
+      "totalClients": 10,
+      "totalFilesProcessed": 4417,
+      "totalSuccess": 4064,
+      "totalError": 353,
+      "successRate": 92,
+      "errorRate": 8
+    },
+    "clients": [
+      {
+        "clientName": "Alight",
+        "totalFiles": 743,
+        "success": 684,
+        "error": 59
+      },
+      {
+        "clientName": "Apex (Penson)",
+        "totalFiles": 0,
+        "success": 0,
+        "error": 0
+      },
+      {
+        "clientName": "David Lerner",
+        "totalFiles": 277,
+        "success": 255,
+        "error": 22
+      },
+      {
+        "clientName": "Hilltop",
+        "totalFiles": 418,
+        "success": 385,
+        "error": 33
+      },
+      {
+        "clientName": "JPMC",
+        "totalFiles": 598,
+        "success": 550,
+        "error": 48
+      },
+      {
+        "clientName": "Leede Jones Gable",
+        "totalFiles": 0,
+        "success": 0,
+        "error": 0
+      },
+      {
+        "clientName": "NBIN (Inform)",
+        "totalFiles": 0,
+        "success": 0,
+        "error": 0
+      },
+      {
+        "clientName": "Oppenheimer",
+        "totalFiles": 352,
+        "success": 323,
+        "error": 29
+      },
+      {
+        "clientName": "Raymond James (Inform)",
+        "totalFiles": 0,
+        "success": 0,
+        "error": 0
+      },
+      {
+        "clientName": "WorldSource (Inform)",
+        "totalFiles": 0,
+        "success": 0,
+        "error": 0
+      }
+    ]
+  },
+  "meta": {
+    "version": "1.0.0",
+    "environment": "production"
+  }
+}

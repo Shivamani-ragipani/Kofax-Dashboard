@@ -1,0 +1,167 @@
+{
+  "result": {
+    "clientOverviews": [
+      {
+        "clientName": "Alight",
+        "description": "External client using Citrix-based scanning with barcode-driven indexing. No OCR dependency. Uses web service lookups and automated export via Ultimate Export Connector to NextGen IndexData. Environment includes background file handling services for automation and cleanup.",
+        "type": "External",
+        "citrix": true,
+        "ingestion": ["Scan"],
+        "batchClasses": ["Alight Docs"],
+        "barcode": true,
+        "ocr": false,
+        "lookups": ["Web Service Lookup"],
+        "modules": ["Scan", "Validation", "PDF Generator", "Export"],
+        "export": ["Ultimate Export Connector", "NextGen IndexData"],
+        "iwsServices": ["FileTransferService", "DirectoryCleanupService"]
+      },
+      {
+        "clientName": "Apex (Penson)",
+        "description": "External Citrix-enabled implementation handling both standard and manual batch classes. Fully barcode-driven workflow without OCR. Includes QC layer before export to NextGen and ImageMap for downstream processing.",
+        "type": "External",
+        "citrix": true,
+        "ingestion": ["Scan"],
+        "batchClasses": ["Apex Docs", "Apex Manual Docs"],
+        "barcode": true,
+        "ocr": false,
+        "lookups": [],
+        "modules": ["Scan", "Validation", "QC", "Export"],
+        "export": ["NextGen IndexData", "ImageMap"],
+        "iwsServices": ["FileTransferService", "DirectoryCleanupService"]
+      },
+      {
+        "clientName": "David Lerner",
+        "description": "Hybrid ingestion client supporting Scan and Email Import. Barcode-based indexing with file monitoring automation. Suitable for distributed document intake channels with minimal lookup dependencies.",
+        "type": "External",
+        "citrix": false,
+        "ingestion": ["Scan", "Email Import"],
+        "batchClasses": ["David Lerner Docs"],
+        "barcode": true,
+        "ocr": false,
+        "lookups": [],
+        "modules": ["Email Import Module", "Scan", "Validation", "Export"],
+        "export": ["NextGen IndexData"],
+        "iwsServices": ["FileWatcher", "FileTransferService"]
+      },
+      {
+        "clientName": "Hilltop",
+        "description": "Simple scan-based client with no barcode or OCR automation. Fully manual validation workflow. Lightweight implementation with minimal automation dependencies.",
+        "type": "External",
+        "citrix": false,
+        "ingestion": ["Scan"],
+        "batchClasses": ["Hilltop Account Docs", "Hilltop Non-Account Docs"],
+        "barcode": false,
+        "ocr": false,
+        "lookups": [],
+        "modules": ["Scan", "Validation", "Export"],
+        "export": ["NextGen IndexData"],
+        "iwsServices": []
+      },
+      {
+        "clientName": "JPMC",
+        "description": "Internal enterprise-grade implementation with partial OCR enabled and DB lookup integration. Higher automation maturity compared to other clients. Designed for structured indexing and database-backed validation.",
+        "type": "Internal",
+        "citrix": true,
+        "ingestion": ["Scan"],
+        "batchClasses": ["JPMC Docs"],
+        "barcode": true,
+        "ocr": "Partial",
+        "lookups": ["Database Lookup"],
+        "modules": ["Scan", "OCR", "Validation", "Export"],
+        "export": ["NextGen IndexData"],
+        "iwsServices": ["FileWatcher", "FileTransferService"]
+      },
+      {
+        "clientName": "Leede Jones Gable",
+        "description": "Manual-heavy workflow without barcode or OCR automation. Includes QC and PDF generation before export. Uses multi-service IWS setup for monitoring and file lifecycle management.",
+        "type": "External",
+        "citrix": false,
+        "ingestion": ["Scan"],
+        "batchClasses": ["Leede Jones Gable Docs"],
+        "barcode": false,
+        "ocr": false,
+        "lookups": [],
+        "modules": ["Scan", "QC", "Validation", "PDF Generator", "Export"],
+        "export": ["NextGen IndexData", "ImageMap"],
+        "iwsServices": ["FileWatcher", "FileTransferService", "DirectoryCleanupService"]
+      },
+      {
+        "clientName": "NBIN (Inform)",
+        "description": "Complex internal setup with dual batch-class architecture (automated and manual). Advanced image processing modules including Recognition Server and formatting. High automation density with multiple background services and import channels.",
+        "type": "Internal",
+        "citrix": true,
+        "ingestion": ["Scan"],
+        "batchClasses": ["NBIN Docs", "NBIN Docs Manual"],
+        "barcode": true,
+        "ocr": false,
+        "lookups": [],
+        "modules": [
+          "Scan",
+          "Image Standardization",
+          "Recognition Server",
+          "Image Restore",
+          "Formatting",
+          "PDF Generator",
+          "Validation",
+          "Export"
+        ],
+        "export": ["NextGen IndexData", "ImageMap"],
+        "iwsServices": [
+          "FileTransferService",
+          "DirectoryCleanupService",
+          "Blackout",
+          "Fax Import",
+          "KFXedocImportService"
+        ]
+      },
+      {
+        "clientName": "Oppenheimer",
+        "description": "Enterprise client with DB-fed account number lookup. Structured export to NAS directories using ARD/IND/OUT file types. Includes scheduled TWS job for database refresh. Automation maturity is high with backend service orchestration.",
+        "type": "External",
+        "citrix": true,
+        "ingestion": ["Scan"],
+        "batchClasses": ["Passport", "New Accounts"],
+        "barcode": true,
+        "ocr": false,
+        "lookups": ["Database Lookup (SQL Feed)"],
+        "modules": ["Scan", "Validation", "Formatting", "Export"],
+        "export": ["ARD", "IND", "OUT (NAS Path)"],
+        "iwsServices": ["FileWatcher", "FileTransferService", "DirectoryCleanupService"],
+        "specialNote": "TWS Job used for DB Load (Account Data Feed Refresh)"
+      },
+      {
+        "clientName": "Raymond James (Inform)",
+        "description": "Multi-channel ingestion (Scan + Fax) with multi-field barcode recognition. Uses Recognition Server for structured extraction. Highly automated export to NextGen and ImageMap.",
+        "type": "External",
+        "citrix": true,
+        "ingestion": ["Scan", "Fax"],
+        "batchClasses": ["RJ Advisor Docs", "RJ Advisor Docs Manual"],
+        "barcode": "Yes (Multi-field)",
+        "ocr": false,
+        "lookups": [],
+        "modules": ["Scan", "Recognition Server", "Validation", "Export"],
+        "export": ["NextGen IndexData", "ImageMap"],
+        "iwsServices": [
+          "EdocImportService",
+          "Fax Import",
+          "FileTransferService",
+          "DirectoryCleanupService"
+        ]
+      },
+      {
+        "clientName": "WorldSource (Inform)",
+        "description": "Barcode-driven scan implementation with QC layer before export. Fully Citrix-based environment with automated file transfer and cleanup services.",
+        "type": "External",
+        "citrix": true,
+        "ingestion": ["Scan"],
+        "batchClasses": ["WorldSource Docs"],
+        "barcode": true,
+        "ocr": false,
+        "lookups": [],
+        "modules": ["Scan", "QC", "Validation", "Export"],
+        "export": ["NextGen IndexData", "ImageMap"],
+        "iwsServices": ["FileTransferService", "DirectoryCleanupService"]
+      }
+    ]
+  }
+}

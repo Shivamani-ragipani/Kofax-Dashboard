@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#3b82f6">
+    <meta name="description" content="A modern, responsive dashboard application built with React">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <title>VR Dashboard</title>
+</head>
+<body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <script>
+      // Initialize theme before React renders
+      function initializeTheme() {
+        try {
+          const stored = localStorage.getItem('theme');
+          const theme = (stored === 'dark' || stored === 'light') ? stored : 'light';
+          document.documentElement.setAttribute('data-theme', theme);
+        } catch (e) {
+          // Fallback to light theme
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      }
+      initializeTheme();
+    </script>
+    <div id="root"></div>
+  </body>
+</html>

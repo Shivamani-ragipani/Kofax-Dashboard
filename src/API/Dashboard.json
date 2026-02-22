@@ -1,0 +1,139 @@
+{
+  "result": {
+    "summary": {
+      "totalClients": {
+        "count": 14,
+        "growthPercentage": 0,
+        "growthPeriod": "current_dataset"
+      },
+      "kofaxTeamClients": {
+        "count": 14,
+        "percentageOfTotal": 100
+      },
+      "ttaTeamClients": {
+        "count": 1,
+        "percentageOfTotal": 7.14
+      },
+      "activeImplementations": {
+        "activeCount": 9,
+        "inProgressCount": 3,
+        "completedCount": 2
+      }
+    },
+    "totalRecords": 14,
+    "clients": [
+      {
+        "clientId": 1,
+        "clientName": "Alight",
+        "platform": ["Kofax"],
+        "country": "USA",
+        "modulesUsed": ["OCR", "Workflow"],
+        "status": "Active"
+      },
+      {
+        "clientId": 2,
+        "clientName": "Aptia",
+        "platform": ["Kofax", "TTA"],
+        "country": "UK",
+        "modulesUsed": ["OCR", "Validation"],
+        "status": "Active"
+      },
+      {
+        "clientId": 3,
+        "clientName": "BRTA",
+        "platform": ["Kofax"],
+        "country": "Bangladesh",
+        "modulesUsed": ["Workflow", "Reporting"],
+        "status": "In Progress"
+      },
+      {
+        "clientId": 4,
+        "clientName": "BRVP",
+        "platform": ["Kofax"],
+        "country": "USA",
+        "modulesUsed": ["OCR", "Workflow", "Validation"],
+        "status": "Completed"
+      },
+      {
+        "clientId": 5,
+        "clientName": "DavidLerner",
+        "platform": ["Kofax"],
+        "country": "USA",
+        "modulesUsed": ["OCR", "Reporting"],
+        "status": "Active"
+      },
+      {
+        "clientId": 6,
+        "clientName": "Hilltop",
+        "platform": ["Kofax"],
+        "country": "USA",
+        "modulesUsed": ["Workflow", "Validation"],
+        "status": "Active"
+      },
+      {
+        "clientId": 7,
+        "clientName": "JPMC",
+        "platform": ["Kofax"],
+        "country": "USA",
+        "modulesUsed": ["OCR", "Workflow", "Reporting"],
+        "status": "Active"
+      },
+      {
+        "clientId": 8,
+        "clientName": "LeedeJonesGable",
+        "platform": ["Kofax"],
+        "country": "Canada",
+        "modulesUsed": ["OCR", "Validation"],
+        "status": "In Progress"
+      },
+      {
+        "clientId": 9,
+        "clientName": "NBINCanada",
+        "platform": ["Kofax"],
+        "country": "Canada",
+        "modulesUsed": ["OCR", "Workflow"],
+        "status": "Active"
+      },
+      {
+        "clientId": 10,
+        "clientName": "NLIT",
+        "platform": ["Kofax"],
+        "country": "USA",
+        "modulesUsed": ["Workflow", "Reporting"],
+        "status": "Completed"
+      },
+      {
+        "clientId": 11,
+        "clientName": "Oppenheimer",
+        "platform": ["Kofax"],
+        "country": "USA",
+        "modulesUsed": ["OCR", "Workflow", "Validation"],
+        "status": "Active"
+      },
+      {
+        "clientId": 12,
+        "clientName": "Penson",
+        "platform": ["Kofax"],
+        "country": "USA",
+        "modulesUsed": ["OCR", "Reporting"],
+        "status": "In Progress"
+      },
+      {
+        "clientId": 13,
+        "clientName": "RaymondJames",
+        "platform": ["Kofax"],
+        "country": "USA",
+        "modulesUsed": ["OCR", "Workflow"],
+        "status": "Active"
+      },
+      {
+        "clientId": 14,
+        "clientName": "WorldSource",
+        "platform": ["Kofax"],
+        "country": "Canada",
+        "modulesUsed": ["Workflow", "Validation"],
+        "status": "Active"
+      }
+    ]
+  }
+}

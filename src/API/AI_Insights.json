@@ -1,0 +1,52 @@
+{
+  "result": {
+    "module": "AI Insights",
+    "description": "AI powered anomaly intelligence & smart remediation",
+    "metrics": {
+      "aiAnalysisRuns": {
+        "total": 14,
+        "todayIncrease": 12
+      },
+      "detectedAnomalies": {
+        "total": 7,
+        "highSeverity": 2
+      },
+      "predictedRisks": {
+        "total": 3,
+        "forecastWindow": "next_7_days"
+      },
+      "autoResolvedAlerts": {
+        "total": 18,
+        "accuracy": "92%"
+      }
+    },
+    "aiPredictionsAndTrends": {
+      "trendPercentage": 3.4,
+      "direction": "up",
+      "forecastWindow": "next_7_days"
+    },
+    "aiGeneratedInsights": [
+      {
+        "title": "OCR degradation predicted next week",
+        "confidence": 91,
+        "action": "view"
+      },
+      {
+        "title": "Client underutilising reporting",
+        "confidence": 85,
+        "action": "view"
+      },
+      {
+        "title": "Automation usage increasing",
+        "confidence": 72,
+        "action": "view"
+      }
+    ],
+    "smartRecommendations": [
+      "Scale OCR nodes (+2)",
+      "Optimize workflow latency",
+      "Upgrade DB infrastructure"
+    ],
+    "timestamp": "2026-02-22T00:00:00Z"
+  }
+}
