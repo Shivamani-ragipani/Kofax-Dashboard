@@ -6,7 +6,8 @@ import {
   BarChart3,
   Users,
   Settings,
-  Menu
+  Menu,
+  Layers
 } from 'lucide-react';
 import '../styles/sidebar.css';
 
@@ -20,6 +21,7 @@ function Sidebar({ isOpen, onToggleSidebar, onNavigate }) {
     { id: 'analytics', label: 'Feature Analytics', icon: BarChart3 },
     { id: 'reports', label: 'Reports', icon: Users },
     { id: 'ai-insights', label: 'AI Insights', icon: Users },
+    { id: 'architecture', label: 'Architecture', icon: Layers },
     { id: 'settings', label: 'Settings', icon: Settings }
   ];
 

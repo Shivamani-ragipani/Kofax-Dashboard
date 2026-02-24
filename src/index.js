@@ -7,6 +7,7 @@ import './styles/sidebar.css';
 import './styles/kpi-cards.css';
 import './styles/charts.css';
 import './styles/client-table.css';
+import './styles/architecture.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

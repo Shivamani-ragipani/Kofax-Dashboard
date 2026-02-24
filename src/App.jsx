@@ -5,6 +5,7 @@ import KPICards from './components/KPICards';
 import ChartsSection from './components/ChartsSection';
 import ClientTable from './components/ClientTable';
 import AiInsights from './components/AiInsights';
+import Architecture from './components/Architecture';
 import './styles/app.css';
 
 function App() {
@@ -39,6 +40,8 @@ function App() {
         <div className="dashboard-content">
           {activeView === 'ai-insights' ? (
             <AiInsights />
+          ) : activeView === 'architecture' ? (
+            <Architecture />
           ) : (
             <>
               <KPICards />

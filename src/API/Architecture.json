@@ -1,0 +1,142 @@
+{
+  "status": "success",
+  "message": "Client architectures fetched successfully",
+  "environment": "Prod",
+  "data": [
+    {
+      "client": {
+        "id": "global-bank",
+        "name": "Global Bank",
+        "team": "TTA",
+        "industry": "Banking"
+      },
+      "architecture": {
+        "diagramImages": [
+          "/assets/architecture/global-bank-prod.png",
+          "/assets/architecture/fin-core-prod.png"
+        ],
+        "deploymentType": "Hybrid",
+        "hostingEnvironment": "AWS",
+        "database": "SQL",
+        "coreModules": ["OCR", "Workflow", "Validation"],
+        "integrations": ["API", "SFTP", "Web Service"],
+        "security": ["OAuth", "VPN"],
+        "dataFlowSummary": [
+          "Document ingestion",
+          "OCR processing",
+          "Validation stage",
+          "Data export to core banking system"
+        ],
+        "lastUpdated": "2026-02-20T10:45:00Z"
+      }
+    },
+    {
+      "client": {
+        "id": "fin-core",
+        "name": "FinCore Solutions",
+        "team": "TTA",
+        "industry": "FinTech"
+      },
+      "architecture": {
+        "diagramImages": [
+          "/assets/architecture/fin-core-prod.png",
+          "/assets/architecture/global-bank-prod.png"
+        ],
+        "deploymentType": "Cloud",
+        "hostingEnvironment": "Azure",
+        "database": "PostgreSQL",
+        "coreModules": ["Workflow", "Validation"],
+        "integrations": ["REST API", "Message Queue"],
+        "security": ["OAuth", "Token-Based Auth"],
+        "dataFlowSummary": [
+          "File upload via API",
+          "Workflow orchestration",
+          "Validation rules execution",
+          "Data sync to reporting engine"
+        ],
+        "lastUpdated": "2026-02-18T14:20:00Z"
+      }
+    },
+    {
+      "client": {
+        "id": "axis-insurance",
+        "name": "Axis Insurance",
+        "team": "Kofax",
+        "industry": "Insurance"
+      },
+      "architecture": {
+        "diagramImages": [
+          "/assets/architecture/axis-insurance-prod.png",
+          "/assets/architecture/metro-financial-prod.jpeg"
+        ],
+        "deploymentType": "On-Prem",
+        "hostingEnvironment": "Private Data Center",
+        "database": "Oracle",
+        "coreModules": ["OCR", "Validation"],
+        "integrations": ["SFTP", "SOAP Web Service"],
+        "security": ["VPN", "Basic Auth"],
+        "dataFlowSummary": [
+          "Batch document ingestion",
+          "OCR extraction",
+          "Manual validation stage",
+          "Export to policy management system"
+        ],
+        "lastUpdated": "2026-02-15T09:10:00Z"
+      }
+    },
+    {
+      "client": {
+        "id": "nova-pay",
+        "name": "NovaPay Systems",
+        "team": "TTA",
+        "industry": "Payments"
+      },
+      "architecture": {
+        "diagramImages": [
+          "/assets/architecture/nova-pay-prod.png",
+          "/assets/architecture/axis-insurance-prod.png"
+        ],
+        "deploymentType": "Cloud",
+        "hostingEnvironment": "AWS",
+        "database": "MongoDB",
+        "coreModules": ["Workflow", "Rules Engine", "Reporting"],
+        "integrations": ["REST API", "Kafka"],
+        "security": ["OAuth", "SSL Encryption"],
+        "dataFlowSummary": [
+          "API-based transaction ingestion",
+          "Rules engine validation",
+          "Fraud detection workflow",
+          "Reporting dashboard update"
+        ],
+        "lastUpdated": "2026-02-21T11:30:00Z"
+      }
+    },
+    {
+      "client": {
+        "id": "metro-financial",
+        "name": "Metro Financial Group",
+        "team": "Kofax",
+        "industry": "Financial Services"
+      },
+      "architecture": {
+        "diagramImages": [
+          "/assets/architecture/metro-financial-prod.jpeg",
+          "/assets/architecture/global-bank-prod.png"
+        ],
+        "deploymentType": "Hybrid",
+        "hostingEnvironment": "Azure",
+        "database": "SQL Server",
+        "coreModules": ["OCR", "Workflow", "Reporting"],
+        "integrations": ["REST API", "SFTP"],
+        "security": ["VPN", "Role-Based Access"],
+        "dataFlowSummary": [
+          "Multi-channel document intake",
+          "OCR and classification",
+          "Workflow routing",
+          "Export to financial reporting system"
+        ],
+        "lastUpdated": "2026-02-19T16:00:00Z"
+      }
+    }
+  ]
+}
