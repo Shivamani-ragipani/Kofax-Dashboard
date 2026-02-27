@@ -29,7 +29,7 @@ export default function Header({ onToggleSidebar }) {
         <button className="menu-btn" onClick={onToggleSidebar} aria-label="Toggle sidebar">
           <Menu size={20} />
         </button>
-        <h1>Dashboard </h1>
+        <h1>Broadridge </h1>
       </div>
 
       <div className="header-right">

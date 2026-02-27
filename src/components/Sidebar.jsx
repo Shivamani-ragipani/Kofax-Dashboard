@@ -7,12 +7,15 @@ import {
   Users,
   Settings,
   Menu,
-  Layers
+  Layers,
+  LogOut
 } from 'lucide-react';
 import '../styles/sidebar.css';
 
-function Sidebar({ isOpen, onToggleSidebar, onNavigate }) {
+function Sidebar({ isOpen, onToggleSidebar, onNavigate, onLogout }) {
+
   const [activeItem, setActiveItem] = useState('dashboard');
+  const [showLogout, setShowLogout] = useState(false);
 
   const menuItems = [
     { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
@@ -27,7 +30,7 @@ function Sidebar({ isOpen, onToggleSidebar, onNavigate }) {
 
   return (
     <aside className={`sidebar ${isOpen ? 'open' : 'closed'}`}>
-      
+
       <div className="sidebar-header">
         <button
           className="sidebar-toggle-btn"
@@ -59,19 +62,36 @@ function Sidebar({ isOpen, onToggleSidebar, onNavigate }) {
         </ul>
       </nav>
 
-      {/* 👇 PROFILE SECTION */}
+
       <div className="sidebar-footer profile-section">
-        <div className="profile-container">
+
+        <div
+          className="profile-container"
+          onClick={() => setShowLogout(!showLogout)}
+        >
           <img
             src="/my-avatar.png"
             alt="Vamshi Ragipani"
             className="profile-avatar"
           />
+
           <div className="profile-info">
             <span className="profile-name">Vamshi Ragipani</span>
             <span className="profile-role">SDE</span>
           </div>
         </div>
+
+
+        {showLogout && (
+          <button
+            className="logout-btn"
+            onClick={() => onLogout()}
+          >
+            <LogOut size={18} />
+            <span>Logout</span>
+          </button>
+        )}
+
       </div>
 
     </aside>
