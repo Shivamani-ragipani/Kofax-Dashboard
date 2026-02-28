@@ -1,0 +1,510 @@
+.clientsinfo-page {
+  padding: 26px 32px;
+  background: var(--bg-main);
+  min-height: 100vh;
+  color: var(--text-primary);
+}
+
+
+/* =============================
+   TOP BAR
+============================= */
+
+.clientsinfo-topbar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  padding: 9px 14px;
+  border-radius: 8px;
+  min-width: 260px;
+  transition: all 0.25s ease;
+}
+
+.search-box input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--text-primary);
+  font-size: 14px;
+  width: 100%;
+}
+
+.search-box:focus-within {
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 0 2px rgba(34,211,238,0.2);
+}
+
+
+
+.clientsinfo-topbar select {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  padding: 9px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  min-width: 190px;
+  transition: all 0.25s ease;
+}
+
+.clientsinfo-topbar select:focus {
+  outline: none;
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 0 2px rgba(34,211,238,0.2);
+}
+
+
+
+/* =============================
+   EXPORT BUTTON
+============================= */
+
+.export-btn {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  background: transparent;
+  border: 1px solid var(--accent-blue);
+
+  color: var(--accent-blue);
+
+  padding: 8px 14px;
+  border-radius: 8px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.export-btn:hover {
+  background: var(--accent-blue);
+  color: white;
+}
+
+
+
+/* =============================
+   TABLE CONTAINER
+============================= */
+
+.clientsinfo-table-container {
+  background: var(--bg-card);
+  border-radius: 14px;
+  border: 1px solid var(--border-subtle);
+  overflow: hidden;
+}
+
+
+
+/* =============================
+   TABLE
+============================= */
+
+.clientsinfo-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+
+
+.clientsinfo-table thead {
+  background: var(--bg-darker);
+}
+
+
+
+.clientsinfo-table th {
+  text-align: left;
+  padding: 14px 18px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-subtle);
+  font-size: 13px;
+}
+
+
+
+.clientsinfo-table td {
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--border-subtle);
+  vertical-align: middle;
+}
+
+
+
+.clientsinfo-table tbody tr {
+  transition: background 0.25s ease;
+}
+
+
+
+.clientsinfo-table tbody tr:hover {
+  background: rgba(34,211,238,0.05);
+}
+
+
+
+/* =============================
+   STATUS BADGES
+============================= */
+
+.status {
+  padding: 4px 10px;
+  border-radius: 14px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+
+
+.status.active {
+  background: rgba(34,197,94,0.15);
+  color: #22c55e;
+  border: 1px solid rgba(34,197,94,0.35);
+}
+
+
+
+.status.inactive {
+  background: rgba(239,68,68,0.15);
+  color: #ef4444;
+  border: 1px solid rgba(239,68,68,0.35);
+}
+
+
+
+/* =============================
+   ACTION BUTTON
+============================= */
+
+.view-btn {
+
+  background: transparent;
+
+  border: 1px solid var(--accent-blue);
+
+  color: var(--accent-blue);
+
+  padding: 6px 14px;
+
+  border-radius: 6px;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+
+}
+
+.view-btn:hover {
+
+  background: var(--accent-blue);
+
+  color: white;
+
+  transform: translateY(-1px);
+
+}
+
+
+
+/* =============================
+   FOOTER
+============================= */
+
+.clientsinfo-footer {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-top: 14px;
+
+  font-size: 12px;
+
+  color: var(--text-secondary);
+
+}
+
+
+
+/* =============================
+   MODAL POPUP
+============================= */
+
+.modal-overlay {
+
+  position: fixed;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  background: rgba(0,0,0,0.55);
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  z-index: 999;
+
+  animation: fadeIn 0.2s ease;
+
+}
+
+
+
+.modal-box {
+
+  background: var(--bg-card);
+
+  border-radius: 14px;
+
+  border: 1px solid var(--border-subtle);
+
+  width: 520px;
+
+  max-width: 90%;
+
+  padding: 22px;
+
+  animation: scaleIn 0.25s ease;
+
+}
+
+
+
+.modal-header {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 18px;
+
+}
+
+
+
+.modal-header h3 {
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  color: var(--text-primary);
+
+}
+
+
+
+.close-btn {
+
+  cursor: pointer;
+
+  color: var(--text-secondary);
+
+  transition: all 0.2s ease;
+
+}
+
+.close-btn:hover {
+
+  color: var(--accent-red);
+
+}
+
+
+
+/* =============================
+   DETAILS TABLE
+============================= */
+
+.details-table {
+
+  width: 100%;
+
+  border-collapse: collapse;
+
+  font-size: 13px;
+
+}
+
+
+
+.details-table td {
+
+  padding: 10px 6px;
+
+  border-bottom: 1px solid var(--border-subtle);
+
+}
+
+
+
+.details-table td:first-child {
+
+  width: 40%;
+
+  color: var(--text-secondary);
+
+  font-weight: 500;
+
+}
+
+
+
+.details-table td:last-child {
+
+  color: var(--text-primary);
+
+  font-weight: 600;
+
+}
+
+
+
+/* =============================
+   ANIMATIONS
+============================= */
+
+@keyframes fadeIn {
+
+  from { opacity: 0; }
+
+  to { opacity: 1; }
+
+}
+
+@keyframes scaleIn {
+
+  from {
+    transform: scale(0.92);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+}
+
+
+
+/* =============================
+   RESPONSIVE
+============================= */
+
+@media (max-width: 1100px) {
+
+.clientsinfo-topbar {
+  flex-wrap: wrap;
+}
+
+.export-btn {
+  margin-left: 0;
+}
+
+}
+
+
+
+@media (max-width: 900px) {
+
+.clientsinfo-table {
+  font-size: 12px;
+}
+
+.clientsinfo-table th,
+.clientsinfo-table td {
+  padding: 10px 12px;
+}
+
+}
+
+
+
+@media (max-width: 768px) {
+
+.clientsinfo-page {
+  padding: 20px;
+}
+
+.clientsinfo-topbar {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.search-box {
+  width: 100%;
+}
+
+.clientsinfo-topbar select {
+  width: 100%;
+}
+
+.export-btn {
+  width: 100%;
+  justify-content: center;
+}
+
+}
+
+
+
+/* =============================
+   DARK THEME VARIABLES
+============================= */
+
+[data-theme='dark'] {
+
+  --bg-dark: #0b0b0c;
+  --bg-darker: #141416;
+  --bg-card: #141416;
+
+  --text-primary: #f5f5f7;
+  --text-secondary: #9ca3af;
+
+  --border-color: rgba(255, 255, 255, 0.06);
+
+  --accent-blue: #22d3ee;
+  --accent-cyan: #22d3ee;
+  --accent-green: #22c55e;
+  --accent-purple: #8b5cf6;
+  --accent-orange: #f97316;
+  --accent-red: #ef4444;
+
+  --header-bg: #141416;
+
+}

@@ -214,15 +214,6 @@ const GeminiChat = () => {
   const chatRef = useRef(null);
 
 
-/* Auto Scroll */
-
-  useEffect(() => {
-
-    chatRef.current?.scrollIntoView({
-      behavior: "smooth"
-    });
-
-  }, [messages]);
 
 
 /* Send Message */
