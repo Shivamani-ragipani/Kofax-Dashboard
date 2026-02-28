@@ -1,0 +1,115 @@
+{
+  "totalCount": 10,
+  "data": [
+    {
+      "id": "CL001",
+      "name": "Alight",
+      "product": "Kofax",
+      "status": "Active",
+      "businessPerson": {
+        "name": "Darren Smith",
+        "email": "darren.smith@alight.com"
+      },
+      "overview": "Alight uses Kofax intelligent document processing solutions to automate financial document workflows and improve operational efficiency."
+    },
+    {
+      "id": "CL002",
+      "name": "Apex (Penson)",
+      "product": "Kofax",
+      "status": "Active",
+      "businessPerson": {
+        "name": "Emily Carter",
+        "email": "emily.carter@apexpenson.com"
+      },
+      "overview": "Apex (Penson) leverages Kofax automation tools for document capture, validation, and compliance workflow optimization."
+    },
+    {
+      "id": "CL003",
+      "name": "David Lerner",
+      "product": "Kofax",
+      "status": "Active",
+      "businessPerson": {
+        "name": "Michael Brown",
+        "email": "michael.brown@davidlerner.com"
+      },
+      "overview": "David Lerner is implementing Kofax solutions to streamline onboarding documentation and regulatory reporting."
+    },
+    {
+      "id": "CL004",
+      "name": "Hilltop",
+      "product": "Kofax",
+      "status": "Not Active",
+      "businessPerson": {
+        "name": "Sophia Williams",
+        "email": "sophia.williams@hilltop.com"
+      },
+      "overview": "Hilltop previously deployed Kofax-based document automation to enhance internal workflows and audit processes."
+    },
+    {
+      "id": "CL005",
+      "name": "JPMC",
+      "product": "Kofax",
+      "status": "Active",
+      "businessPerson": {
+        "name": "Daniel Johnson",
+        "email": "daniel.johnson@jpmc.com"
+      },
+      "overview": "JPMC leverages Kofax capture and workflow automation for large-scale financial document processing."
+    },
+    {
+      "id": "CL006",
+      "name": "Leede Jones Gable",
+      "product": "Kofax",
+      "status": "Not Active",
+      "businessPerson": {
+        "name": "Olivia Martinez",
+        "email": "olivia.martinez@leedejonesgable.com"
+      },
+      "overview": "Leede Jones Gable utilized Kofax automation solutions as part of its digital transformation initiatives."
+    },
+    {
+      "id": "CL007",
+      "name": "NBIN (Inform)",
+      "product": "Kofax",
+      "status": "Active",
+      "businessPerson": {
+        "name": "James Wilson",
+        "email": "james.wilson@nbin.com"
+      },
+      "overview": "NBIN (Inform) implements Kofax-driven document classification and validation systems."
+    },
+    {
+      "id": "CL008",
+      "name": "Oppenheimer",
+      "product": "Kofax",
+      "status": "Not Active",
+      "businessPerson": {
+        "name": "Charlotte Davis",
+        "email": "charlotte.davis@oppenheimer.com"
+      },
+      "overview": "Oppenheimer deployed Kofax solutions for automating document-heavy financial operations."
+    },
+    {
+      "id": "CL009",
+      "name": "Raymond James (Inform)",
+      "product": "Kofax",
+      "status": "Active",
+      "businessPerson": {
+        "name": "Matthew Taylor",
+        "email": "matthew.taylor@raymondjames.com"
+      },
+      "overview": "Raymond James (Inform) uses Kofax automation to streamline client documentation lifecycle management."
+    },
+    {
+      "id": "CL010",
+      "name": "WorldSource (Inform)",
+      "product": "Kofax",
+      "status": "Active",
+      "businessPerson": {
+        "name": "Isabella Anderson",
+        "email": "isabella.anderson@worldsource.com"
+      },
+      "overview": "WorldSource (Inform) integrates Kofax automation solutions to reduce manual processing."
+    }
+  ]
+}
