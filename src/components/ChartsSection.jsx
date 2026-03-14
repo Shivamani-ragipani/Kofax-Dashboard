@@ -366,6 +366,46 @@ export default function ChartsSection() {
           </>
         )}
       </div>
+
+      <div className="chart-card">
+        <div className="chart-header">
+          <h3 className="chart-title">Files Monitoring</h3>
+          <button
+            className="collapse-btn"
+            onClick={() => setIsPieChartCollapsed(!isPieChartCollapsed)}
+            title={isPieChartCollapsed ? "Expand" : "Collapse"}
+          >
+            {isPieChartCollapsed ? "▼" : "▲"}
+          </button>
+        </div>
+
+        {!isPieChartCollapsed && (
+          <>
+            <ResponsiveContainer width="100%" height={280}>
+              <PieChart>
+                <Pie
+                  data={overallPieData}
+                  cx="50%"
+                  cy="50%"
+                  innerRadius={60}
+                  outerRadius={100}
+                  paddingAngle={5}
+                  dataKey="value"
+                >
+                  <Cell fill="#22d3ee" />
+                  <Cell fill="#ef4444" />
+                </Pie>
+                <Tooltip />
+              </PieChart>
+            </ResponsiveContainer>
+
+            <div className="donut-labels">
+              <div>Success Rate: {summary.successRate}%</div>
+              <div>Error Rate: {summary.errorRate}%</div>
+            </div>
+          </>
+        )}
+      </div>
     </div>
   );
 }
