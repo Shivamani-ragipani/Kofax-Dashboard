@@ -16,6 +16,7 @@ import ClientTable from "./components/ClientTable";
 import AiInsights from "./components/AiInsights";
 import Architecture from "./components/Architecture";
 import ClientsInfo from "./components/ClientsInfo";
+import Certificates from "./components/Certificates";
 import Settings from "./components/Settings";
 
 import Login from "./components/Login";
@@ -223,42 +224,50 @@ function App() {
 
         {/* Architecture */}
 
-        <Route
-          path="/architecture"
-          element={
-
-            <ProtectedLayout
-              sidebarOpen={sidebarOpen}
-              setSidebarOpen={setSidebarOpen}
-              onLogout={() => setIsLoggedIn(false)}
-            >
-
-              <Architecture />
-
-            </ProtectedLayout>
-
-          }
-        />
+<Route
+  path="/architecture"
+  element={
+    <ProtectedLayout
+      sidebarOpen={sidebarOpen}
+      setSidebarOpen={setSidebarOpen}
+      onLogout={() => setIsLoggedIn(false)}
+    >
+      <Architecture />
+    </ProtectedLayout>
+  }
+/>
 
 
-        {/* Settings */}
+{/* Certificates */}
 
-        <Route
-          path="/settings"
-          element={
+<Route
+  path="/certificates"
+  element={
+    <ProtectedLayout
+      sidebarOpen={sidebarOpen}
+      setSidebarOpen={setSidebarOpen}
+      onLogout={() => setIsLoggedIn(false)}
+    >
+      <Certificates />
+    </ProtectedLayout>
+  }
+/>
 
-            <ProtectedLayout
-              sidebarOpen={sidebarOpen}
-              setSidebarOpen={setSidebarOpen}
-              onLogout={() => setIsLoggedIn(false)}
-            >
 
-              <Settings />
+{/* Settings */}
 
-            </ProtectedLayout>
-
-          }
-        />
+<Route
+  path="/settings"
+  element={
+    <ProtectedLayout
+      sidebarOpen={sidebarOpen}
+      setSidebarOpen={setSidebarOpen}
+      onLogout={() => setIsLoggedIn(false)}
+    >
+      <Settings />
+    </ProtectedLayout>
+  }
+/>
 
 
         {/* Fallback */}

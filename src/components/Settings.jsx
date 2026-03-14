@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../styles/settings.css";
 
-function Settings() {
+function Settings({ onClose }) {
 
   const getStoredTheme = () => {
     try {
@@ -23,6 +23,18 @@ function Settings() {
     localStorage.setItem("theme", theme);
   }, [theme]);
 
+  useEffect(() => {
+    const stored = localStorage.getItem("dashboardSettings");
+
+    if (stored) {
+      const s = JSON.parse(stored);
+      setNotifications(s.notifications);
+      setAutoRefresh(s.autoRefresh);
+      setUsername(s.username);
+      setEmail(s.email);
+    }
+  }, []);
+
   const saveSettings = () => {
 
     const settings = {
@@ -43,32 +55,25 @@ function Settings() {
 
   };
 
-  useEffect(() => {
-
-    const stored = localStorage.getItem("dashboardSettings");
-
-    if (stored) {
-
-      const s = JSON.parse(stored);
-
-      setNotifications(s.notifications);
-      setAutoRefresh(s.autoRefresh);
-      setUsername(s.username);
-      setEmail(s.email);
-
-    }
-
-  }, []);
-
-
   return (
 
     <div className="settings-page">
 
-
       <div className="settings-header">
 
-        <h2>Settings</h2>
+        <div className="settings-title-row">
+          <h2>Settings</h2>
+
+          {onClose && (
+            <button
+              className="settings-close-btn"
+              onClick={onClose}
+            >
+              ✕
+            </button>
+          )}
+
+        </div>
 
         <p>
           Manage application preferences and account configuration
@@ -81,10 +86,11 @@ function Settings() {
       <div className="settings-grid">
 
 
+        {/* Appearance */}
+
         <div className="settings-card">
 
           <h3>Appearance</h3>
-
 
           <div className="setting-row">
 
@@ -92,7 +98,7 @@ function Settings() {
 
             <select
               value={theme}
-              onChange={(e)=>setTheme(e.target.value)}
+              onChange={(e) => setTheme(e.target.value)}
             >
 
               <option value="light">
@@ -111,10 +117,11 @@ function Settings() {
 
 
 
+        {/* Preferences */}
+
         <div className="settings-card">
 
           <h3>Preferences</h3>
-
 
           <div className="setting-row">
 
@@ -125,17 +132,14 @@ function Settings() {
               <input
                 type="checkbox"
                 checked={notifications}
-                onChange={() =>
-                  setNotifications(!notifications)
-                }
+                onChange={() => setNotifications(!notifications)}
               />
 
-              <span className="slider"/>
+              <span className="slider" />
 
             </label>
 
           </div>
-
 
 
           <div className="setting-row">
@@ -147,12 +151,10 @@ function Settings() {
               <input
                 type="checkbox"
                 checked={autoRefresh}
-                onChange={() =>
-                  setAutoRefresh(!autoRefresh)
-                }
+                onChange={() => setAutoRefresh(!autoRefresh)}
               />
 
-              <span className="slider"/>
+              <span className="slider" />
 
             </label>
 
@@ -162,10 +164,11 @@ function Settings() {
 
 
 
+        {/* Profile */}
+
         <div className="settings-card">
 
           <h3>Profile</h3>
-
 
           <div className="form-group">
 
@@ -173,9 +176,7 @@ function Settings() {
 
             <input
               value={username}
-              onChange={(e)=>
-                setUsername(e.target.value)
-              }
+              onChange={(e) => setUsername(e.target.value)}
             />
 
           </div>
@@ -187,9 +188,7 @@ function Settings() {
 
             <input
               value={email}
-              onChange={(e)=>
-                setEmail(e.target.value)
-              }
+              onChange={(e) => setEmail(e.target.value)}
             />
 
           </div>
@@ -207,22 +206,16 @@ function Settings() {
           className="save-btn"
           onClick={saveSettings}
         >
-
           Save Settings
-
         </button>
 
-
         {saved && (
-
           <span className="saved-msg">
             Settings Saved ✓
           </span>
-
         )}
 
       </div>
-
 
     </div>
 

@@ -1,0 +1,436 @@
+/* =========================
+MAIN CONTAINER
+========================= */
+
+.certificates-container {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding: 28px;
+  background: var(--bg-dark);
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+
+/* =========================
+TITLE
+========================= */
+
+.certificates-title {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+}
+
+
+/* =========================
+SUMMARY CARDS
+========================= */
+
+.cert-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.cert-card {
+  background: var(--bg-card);
+  border-radius: 14px;
+  padding: 22px;
+  border: 1px solid var(--border-color);
+  border-top: 3px solid;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.cert-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+[data-theme='dark'] .cert-card:hover {
+  box-shadow: 0 14px 34px rgba(0,0,0,0.35);
+}
+
+
+/* Card Header Layout */
+
+.cert-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cert-card-title {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+.cert-card-value {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+
+/* Card Icons */
+
+.cert-card-icon {
+  opacity: 0.9;
+}
+
+.cert-card-icon.blue {
+  color: var(--accent-blue);
+}
+
+.cert-card-icon.orange {
+  color: var(--accent-orange);
+}
+
+.cert-card-icon.red {
+  color: var(--accent-red);
+}
+
+.cert-card-icon.green {
+  color: var(--accent-green);
+}
+
+
+/* Card Accent Colors */
+
+.cert-card.blue {
+  border-top-color: var(--accent-blue);
+}
+
+.cert-card.orange {
+  border-top-color: var(--accent-orange);
+}
+
+.cert-card.red {
+  border-top-color: var(--accent-red);
+}
+
+.cert-card.green {
+  border-top-color: var(--accent-green);
+}
+
+
+
+/* =========================
+FILTER BAR
+========================= */
+
+.cert-filter-section {
+  background: var(--bg-card);
+  border-radius: 14px;
+  padding: 20px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+[data-theme='dark'] .cert-filter-section {
+  box-shadow: 0 8px 22px rgba(0,0,0,0.35);
+}
+
+
+/* FILTER ROW */
+
+.cert-filter-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 16px;
+  align-items: center;
+}
+
+
+/* =========================
+INPUT GROUP (ICON + INPUT)
+========================= */
+
+.cert-input-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--bg-darker);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 10px 14px;
+  transition: all 0.25s ease;
+}
+
+.cert-input-group svg {
+  color: var(--text-secondary);
+  flex-shrink: 0;
+}
+
+
+/* Hover effect */
+
+.cert-input-group:hover {
+  border-color: var(--accent-blue);
+}
+
+
+/* Focus effect */
+
+.cert-input-group:focus-within {
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 0 2px rgba(59,130,246,0.15);
+}
+
+
+/* =========================
+SEARCH INPUT
+========================= */
+
+.cert-search {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--text-primary);
+  font-size: 13px;
+  flex: 1;
+}
+
+.cert-search::placeholder {
+  color: var(--text-secondary);
+}
+
+
+/* =========================
+SELECT
+========================= */
+
+.cert-select {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--text-primary);
+  font-size: 13px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.cert-select option {
+  background: var(--bg-card);
+  color: var(--text-primary);
+}
+
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media (max-width: 1100px) {
+
+  .cert-filter-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+@media (max-width: 700px) {
+
+  .cert-filter-row {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+
+/* =========================
+TABLE
+========================= */
+
+.cert-table-wrapper {
+  background: var(--bg-card);
+  border-radius: 14px;
+  border: 1px solid var(--border-color);
+  padding: 22px;
+}
+
+.cert-table-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.cert-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.cert-table thead th {
+  text-align: left;
+  padding: 12px 8px;
+  color: var(--text-secondary);
+  font-weight: 600;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.cert-table td {
+  padding: 11px 8px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.cert-table tbody tr {
+  transition: all 0.2s ease;
+}
+
+.cert-table tbody tr:hover {
+  background: rgba(59,130,246,0.06);
+}
+
+[data-theme='dark'] .cert-table tbody tr:hover {
+  background: rgba(34,211,238,0.05);
+}
+
+
+
+/* =========================
+STATUS BADGES
+========================= */
+
+.cert-status {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.cert-status.healthy {
+  background: rgba(34,197,94,0.15);
+  color: var(--accent-green);
+}
+
+.cert-status.expiring {
+  background: rgba(249,115,22,0.15);
+  color: var(--accent-orange);
+}
+
+.cert-status.expired {
+  background: rgba(239,68,68,0.15);
+  color: var(--accent-red);
+}
+
+
+
+/* =========================
+ACTION LINK
+========================= */
+
+.cert-action {
+  color: var(--accent-blue);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cert-action:hover {
+  text-decoration: underline;
+}
+
+
+
+/* =========================
+EXPIRY TIMELINE
+========================= */
+
+.cert-expiry-section {
+  margin-top: 28px;
+}
+
+.cert-expiry-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.expiry-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+
+.expiry-label {
+  width: 70px;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.expiry-bar {
+  flex: 1;
+  height: 8px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.06);
+}
+
+[data-theme='light'] .expiry-bar {
+  background: rgba(0,0,0,0.08);
+}
+
+.expiry-fill {
+  height: 100%;
+  border-radius: 999px;
+}
+
+.expiry-fill.red {
+  background: var(--accent-red);
+}
+
+.expiry-fill.orange {
+  background: var(--accent-orange);
+}
+
+.expiry-fill.green {
+  background: var(--accent-green);
+}
+
+.expiry-fill.blue {
+  background: var(--accent-blue);
+}
+
+.expiry-count {
+  width: 30px;
+  text-align: right;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+  .cert-table-wrapper {
+    overflow-x: auto;
+  }
+
+  .cert-table {
+    min-width: 900px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .cert-summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cert-filter-row {
+    flex-direction: column;
+  }
+
+}

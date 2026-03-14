@@ -196,6 +196,10 @@
   }
 }
 
+.settings-wrapper{
+  position: relative;
+}
+
 /* Mobile menu button for toggling sidebar */
 .menu-btn {
   display: none;

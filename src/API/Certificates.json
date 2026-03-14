@@ -1,0 +1,89 @@
+{
+  "results": {
+    "summary": {
+      "totalCertificates": 36,
+      "expiringSoon": 5,
+      "expiredCertificates": 2,
+      "healthyCertificates": 29
+    },
+    "filters": {
+      "teamOptions": ["All", "Kofax", "TTA"],
+      "statusOptions": ["Healthy", "Expiring Soon", "Expired"]
+    },
+    "certificates": [
+      {
+        "clientName": "Global Bank",
+        "domain": "portal.globalbank.com",
+        "product": "TTA",
+        "certificateProvider": "DigiCert",
+        "issuedDate": "2026-01-10",
+        "expiryDate": "2027-01-10",
+        "daysRemaining": 370,
+        "status": "Healthy",
+        "renewalOwner": "DevOps Team"
+      },
+      {
+        "clientName": "FinCore",
+        "domain": "api.fincore.io",
+        "product": "TTA",
+        "certificateProvider": "Let's Encrypt",
+        "issuedDate": "2026-02-01",
+        "expiryDate": "2026-05-01",
+        "daysRemaining": 70,
+        "status": "Expiring Soon",
+        "renewalOwner": "Rahul Sharma"
+      },
+      {
+        "clientName": "Axis Insurance",
+        "domain": "secure.axisinsure.com",
+        "product": "Kofax",
+        "certificateProvider": "DigiCert",
+        "issuedDate": "2025-03-01p",
+        "expiryDate": "2026-03-01",
+        "daysRemaining": -20,
+        "status": "Expired",
+        "renewalOwner": "Sarah Lee"
+      },
+      {
+        "clientName": "RetailCorp",
+        "domain": "retailcorp.com",
+        "product": "Kofax",
+        "certificateProvider": "Let's Encrypt",
+        "issuedDate": "2026-04-05",
+        "expiryDate": "2026-07-05",
+        "daysRemaining": 120,
+        "status": "Healthy",
+        "renewalOwner": "Sarah Lee"
+      },
+      {
+        "clientName": "AutoMotive Inc",
+        "domain": "auto.automotive-inc.com",
+        "product": "TTA",
+        "certificateProvider": "Let's Encrypt",
+        "issuedDate": "2026-03-15",
+        "expiryDate": "2026-07-15",
+        "daysRemaining": 100,
+        "status": "Healthy",
+        "renewalOwner": "Rahul Sharma"
+      },
+      {
+        "clientName": "Global Bank",
+        "domain": "api.globalbank.com",
+        "product": "TTA",
+        "certificateProvider": "Let's Encrypt",
+        "issuedDate": "2026-05-01",
+        "expiryDate": "2026-08-01",
+        "daysRemaining": 150,
+        "status": "Healthy",
+        "renewalOwner": "DevOps Team"
+      }
+    ],
+    "expiryTimeline": {
+      "7days": 1,
+      "30days": 4,
+      "60days": 10,
+      "90days": 20
+    }
+  },
+  "error": null
+}

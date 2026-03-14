@@ -7,7 +7,6 @@ import {
   Building2,
   Barcode,
   Eye,
-  Search,
   X,
 } from "lucide-react";
 import dashboardData from "../API/Count.json";
@@ -34,7 +33,7 @@ export default function KPICards() {
         title: summary.kofaxClients.title,
         value: summary.kofaxClients.count,
         description: summary.kofaxClients.description,
-        icon: Database,
+        icon: Users,
         accent: "green",
         details: summary.kofaxClients,
       },
@@ -82,7 +81,7 @@ export default function KPICards() {
         title: summary.lookupUsage.databaseLookup.title,
         value: summary.lookupUsage.databaseLookup.count,
         description: "Clients using database lookup",
-        icon: Search,
+        icon: Database,
         accent: "red",
         details: summary.lookupUsage.databaseLookup,
       },
